@@ -1,0 +1,24 @@
+*** Creating Trace Output File 'BEC033.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"uart.o"'
+### List of Objects: adding '"lcd.o"'
+### List of Objects: adding '"delay.o"'
+### List of Objects: adding '"adc.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "startup.o" "main.o" "uart.o" "lcd.o" "delay.o" "adc.o" --strict --scatter "BEC033.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\BEC033.map" -o "BEC033.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'BEC033.axf'
+### ADS-LD Command File: 'BEC033.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'BEC033.lnp', Handle=0x000002B0
+### Writing '.lnp' file
+### ADS-LD Command file 'BEC033.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

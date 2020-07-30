@@ -1,0 +1,422 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\2015-Projects\2015-PROJECTS\batch110\madc.uvproj
+Project File Date:  02/14/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(312): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(320): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(324): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(336): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(376): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(411): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(415): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5540 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec1100.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(312): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(320): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(324): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(336): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(376): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(411): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(415): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5540 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(312): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(320): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(324): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(336): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(376): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(411): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(415): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5568 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(312): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(320): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(324): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(336): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(376): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(411): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(415): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5568 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(313): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(321): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(328): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(337): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(377): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(412): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(416): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5580 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(313): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(321): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(328): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(337): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(377): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(412): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(416): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5580 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial(num);
+main.c:         ^
+main.c(117): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:         GsmPutSSerial( str );           
+main.c:         ^
+main.c(211): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:       GsmPutSSerial(index);  
+main.c:       ^
+main.c(248): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                 lcd_command_write(0x80);
+main.c:                 ^
+main.c(250): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(253): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);
+main.c:                         ^
+main.c(313): warning:  #223-D: function "lcd_data_write" declared implicitly
+main.c:         for( ;*st ;lcd_data_write(*st++) );
+main.c:                    ^
+main.c(321): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:                         lcd_command_write(0x01);
+main.c:                         ^
+main.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcpy(sms,"(Rose)i'm  In Danger Condition Please Save Me\n My Location Is\n Lat:");
+main.c:                                ^
+main.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.latitude);
+main.c:                                ^
+main.c(327): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,"\n LANG:");
+main.c:                                ^
+main.c(328): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+main.c:                         strcat(sms,gpsdata.longitude);
+main.c:                                ^
+main.c(337): warning:  #223-D: function "lcd_command_write" declared implicitly
+main.c:         lcd_command_write(0x01);
+main.c:         ^
+main.c(377): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c:            GsmPutSSerial(sms_dat.dat);
+main.c:            ^
+main.c(412): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.latitude);
+main.c:                         ^
+main.c(416): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c:                 putSLcd(gpsdata.longitude);     
+main.c:                         ^
+main.c: main.c: 16 warnings, 0 errors
+compiling uart.c...
+compiling lcd.c...
+compiling delay.c...
+linking...
+Program Size: Code=5596 RO-data=100 RW-data=8 ZI-data=1504  
+FromELF: creating hex file...
+"bec111111.axf" - 0 Error(s), 16 Warning(s).

@@ -1,0 +1,4 @@
+--cpu ARM7TDMI "startup.o" "main.o" "uart.o" "lcd.o" "delay.o" "adc.o" --strict --scatter "333333f.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\333333f.map" -o "333333f.axf"
