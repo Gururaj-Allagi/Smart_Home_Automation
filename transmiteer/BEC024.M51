@@ -1,0 +1,549 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        01/10/2015  22:30:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, main.obj, serial.obj, delay.obj, lcd.obj TO BEC024 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  main.obj (MAIN)
+  serial.obj (SERIAL)
+  delay.obj (DELAY)
+  lcd.obj (LCD)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL\C51\LIB\C51S.LIB (PUTCHAR)
+  C:\KEIL\C51\LIB\C51S.LIB (ATOI)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL\C51\LIB\C51S.LIB (ISDIGIT)
+  C:\KEIL\C51\LIB\C51S.LIB (ISSPACE)
+
+
+LINK MAP OF MODULE:  BEC024 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         ?DT?HEARTBEAT_RATE_MONITOR?MAIN
+            DATA    001CH     0003H     UNIT         ?DT?_PUTSSERIAL?SERIAL
+                    001FH     0001H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     002BH     UNIT         _DATA_GROUP_
+            DATA    004DH     0002H     UNIT         ?DT?MAIN
+            DATA    004FH     0002H     UNIT         ?DT?_DELAY_US?DELAY
+            IDATA   0051H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     0576H     UNIT         ?C?LIB_CODE
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 2
+
+
+            CODE    0D76H     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    11E5H     00AEH     UNIT         ?PR?_ATOI?ATOI
+            CODE    1293H     0098H     UNIT         ?PR?TEMPRETURE_MONITOR?MAIN
+            CODE    132BH     0085H     UNIT         ?PR?HEARTBEAT_RATE_MONITOR?MAIN
+            CODE    13B0H     005FH     UNIT         ?CO?MAIN
+            CODE    140FH     002EH     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    143DH     002DH     UNIT         ?PR?MAIN?MAIN
+            CODE    146AH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    1491H     0025H     UNIT         ?PR?_PUTSSERIAL?SERIAL
+            CODE    14B6H     0025H     UNIT         ?PR?_PUTSLCD?LCD
+            CODE    14DBH     0019H     UNIT         ?PR?LCD_WAIT?LCD
+            CODE    14F4H     0013H     UNIT         ?PR?_DELAY_US?DELAY
+            CODE    1507H     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
+            CODE    151AH     000FH     UNIT         ?PR?INTLCD?LCD
+            CODE    1529H     000FH     UNIT         ?PR?_ISDIGIT?ISDIGIT
+            CODE    1538H     000EH     UNIT         ?PR?GETTEMP?MAIN
+            CODE    1546H     000DH     UNIT         ?PR?HEARTBEAT_RATE_COUNT?MAIN
+            CODE    1553H     000CH     UNIT         ?C_C51STARTUP
+            CODE    155FH     000CH     UNIT         ?PR?INTSERIAL?SERIAL
+            CODE    156BH     000CH     UNIT         ?PR?_PUTCLCDC?LCD
+            CODE    1577H     000CH     UNIT         ?PR?_PUTCLCDD?LCD
+            CODE    1583H     0008H     UNIT         ?PR?_PUTCSERIAL?SERIAL
+            CODE    158BH     0008H     UNIT         ?PR?GETCSERIAL?SERIAL
+            CODE    1593H     0007H     UNIT         ?PR?FLUSHSERIALPORT?SERIAL
+
+
+
+OVERLAY MAP OF MODULE:   BEC024 (?C_STARTUP)
+
+
+SEGMENT                                    BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                   START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------
+?C_C51STARTUP                           -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                           -----    -----      -----    -----
+  +--> ?PR?INTLCD?LCD
+  +--> ?PR?INTSERIAL?SERIAL
+  +--> ?PR?_PUTCLCDC?LCD
+  +--> ?CO?MAIN
+  +--> ?PR?_PUTSLCD?LCD
+  +--> ?PR?TEMPRETURE_MONITOR?MAIN
+
+?PR?INTLCD?LCD                          -----    -----      -----    -----
+  +--> ?PR?_PUTCLCDC?LCD
+
+?PR?_PUTCLCDC?LCD                       -----    -----      -----    -----
+  +--> ?PR?LCD_WAIT?LCD
+
+?PR?_PUTSLCD?LCD                        -----    -----      0031H    0003H
+  +--> ?PR?_PUTCLCDD?LCD
+
+?PR?_PUTCLCDD?LCD                       -----    -----      -----    -----
+  +--> ?PR?LCD_WAIT?LCD
+
+?PR?TEMPRETURE_MONITOR?MAIN             -----    -----      0022H    000FH
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 3
+
+
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_ATOI?ATOI
+  +--> ?PR?_PUTCLCDC?LCD
+  +--> ?PR?_PUTSLCD?LCD
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?PRINTF?PRINTF                       0020H.0  0001H.1    0031H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_ATOI?ATOI                          0020H.0  0000H.1    0031H    0005H
+  +--> ?PR?_ISSPACE?ISSPACE
+  +--> ?PR?_ISDIGIT?ISDIGIT
+
+?PR?_DELAY_MS?DELAY                     -----    -----      0031H    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  BEC024 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:1553H         SEGMENT       ?C_C51STARTUP
+  I:0051H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:1556H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:1553H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:1553H         LINE#         133
+  C:1555H         LINE#         134
+  C:1556H         LINE#         135
+  C:1557H         LINE#         136
+  C:1559H         LINE#         185
+  C:155CH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 4
+
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:1546H         PUBLIC        HEARTBEAT_RATE_COUNT
+  D:00A8H         PUBLIC        IE
+  C:1293H         PUBLIC        TEMPRETURE_MONITOR
+  C:143DH         PUBLIC        main
+  C:132BH         PUBLIC        HEARTBEAT_RATE_MONITOR
+  D:0088H         PUBLIC        TCON
+  D:004DH         PUBLIC        HEARTBEAT_SAMPLE
+  B:00B0H.5       PUBLIC        INTR
+  B:00B0H.6       PUBLIC        RD1
+  B:00B0H.7       PUBLIC        WR1
+  C:1538H         PUBLIC        gettemp
+  -------         PROC          MAIN
+  C:143DH         LINE#         20
+  C:143DH         LINE#         21
+  C:143DH         LINE#         22
+  C:1440H         LINE#         23
+  C:1443H         LINE#         26
+  C:1446H         LINE#         27
+  C:1449H         LINE#         29
+  C:144EH         LINE#         30
+  C:1457H         LINE#         31
+  C:145CH         LINE#         32
+  C:1465H         LINE#         34
+  C:1465H         LINE#         35
+  C:1465H         LINE#         36
+  C:1468H         LINE#         38
+  -------         ENDPROC       MAIN
+  -------         PROC          GETTEMP
+  -------         DO            
+  D:0007H         SYMBOL        val
+  -------         ENDDO         
+  C:1538H         LINE#         40
+  C:1538H         LINE#         41
+  C:1538H         LINE#         43
+  C:153AH         LINE#         44
+  C:153CH         LINE#         45
+  C:153FH         LINE#         46
+  C:1541H         LINE#         47
+  C:1543H         LINE#         48
+  C:1545H         LINE#         49
+  C:1545H         LINE#         50
+  -------         ENDPROC       GETTEMP
+  -------         PROC          TEMPRETURE_MONITOR
+  -------         DO            
+  D:0022H         SYMBOL        TEMP
+  D:0023H         SYMBOL        BUFF
+  D:0006H         SYMBOL        val
+  D:002DH         SYMBOL        volts
+  D:0004H         SYMBOL        temp_1
+  -------         ENDDO         
+  C:1293H         LINE#         51
+  C:1293H         LINE#         52
+  C:1293H         LINE#         55
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 5
+
+
+  C:12A0H         LINE#         57
+  C:12B4H         LINE#         58
+  C:12BDH         LINE#         59
+  C:12E1H         LINE#         60
+  C:12F3H         LINE#         61
+  C:130DH         LINE#         63
+  C:1312H         LINE#         64
+  C:131BH         LINE#         65
+  C:1324H         LINE#         66
+  -------         ENDPROC       TEMPRETURE_MONITOR
+  -------         PROC          HEARTBEAT_RATE_MONITOR
+  -------         DO            
+  D:0007H         SYMBOL        HEARTBEAT
+  D:0008H         SYMBOL        BUFF
+  -------         ENDDO         
+  C:132BH         LINE#         68
+  C:132BH         LINE#         69
+  C:132BH         LINE#         73
+  C:1330H         LINE#         74
+  C:1339H         LINE#         76
+  C:133EH         LINE#         77
+  C:1343H         LINE#         78
+  C:134CH         LINE#         79
+  C:1353H         LINE#         80
+  C:135CH         LINE#         81
+  C:1363H         LINE#         82
+  C:136CH         LINE#         83
+  C:1373H         LINE#         84
+  C:137CH         LINE#         85
+  C:1383H         LINE#         87
+  C:1387H         LINE#         88
+  C:139BH         LINE#         89
+  C:13A0H         LINE#         90
+  C:13A9H         LINE#         91
+  -------         ENDPROC       HEARTBEAT_RATE_MONITOR
+  -------         PROC          HEARTBEAT_RATE_COUNT
+  C:1546H         LINE#         94
+  C:1548H         LINE#         96
+  C:1550H         LINE#         97
+  -------         ENDPROC       HEARTBEAT_RATE_COUNT
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        SERIAL
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:1583H         PUBLIC        _putCSerial
+  C:1491H         PUBLIC        _putSSerial
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  C:155FH         PUBLIC        intSerial
+  D:0099H         PUBLIC        SBUF
+  C:1593H         PUBLIC        flushSerialPort
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:008DH         PUBLIC        TH1
+  B:0088H.6       PUBLIC        TR1
+  C:158BH         PUBLIC        getCSerial
+  -------         PROC          INTSERIAL
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 6
+
+
+  C:155FH         LINE#         4
+  C:155FH         LINE#         5
+  C:155FH         LINE#         6
+  C:1562H         LINE#         8
+  C:1565H         LINE#         9
+  C:1568H         LINE#         10
+  C:156AH         LINE#         13
+  -------         ENDPROC       INTSERIAL
+  -------         PROC          _PUTSSERIAL
+  D:001CH         SYMBOL        mess
+  C:1491H         LINE#         14
+  C:1497H         LINE#         15
+  C:1497H         LINE#         16
+  C:14A2H         LINE#         17
+  C:14B5H         LINE#         18
+  -------         ENDPROC       _PUTSSERIAL
+  -------         PROC          _PUTCSERIAL
+  D:0007H         SYMBOL        ch
+  C:1583H         LINE#         19
+  C:1583H         LINE#         20
+  C:1583H         LINE#         21
+  C:1585H         LINE#         22
+  C:1588H         LINE#         23
+  C:158AH         LINE#         24
+  -------         ENDPROC       _PUTCSERIAL
+  -------         PROC          GETCSERIAL
+  -------         DO            
+  D:0007H         SYMBOL        ch
+  -------         ENDDO         
+  C:158BH         LINE#         25
+  C:158BH         LINE#         26
+  C:158BH         LINE#         28
+  C:158EH         LINE#         29
+  C:1590H         LINE#         30
+  C:1592H         LINE#         31
+  C:1592H         LINE#         32
+  -------         ENDPROC       GETCSERIAL
+  -------         PROC          FLUSHSERIALPORT
+  C:1593H         LINE#         34
+  C:1593H         LINE#         35
+  C:1593H         LINE#         36
+  C:1599H         LINE#         37
+  -------         ENDPROC       FLUSHSERIALPORT
+  -------         ENDMOD        SERIAL
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:140FH         PUBLIC        _delay_ms
+  C:14F4H         PUBLIC        _delay_us
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        msec
+  -------         DO            
+  D:0031H         SYMBOL        i
+  D:0033H         SYMBOL        j
+  -------         ENDDO         
+  C:140FH         LINE#         1
+  C:140FH         LINE#         2
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 7
+
+
+  C:140FH         LINE#         4
+  C:141DH         LINE#         5
+  C:143CH         LINE#         6
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          _DELAY_US
+  D:004FH         SYMBOL        usec
+  C:14F4H         LINE#         8
+  C:14F8H         LINE#         9
+  C:14F8H         LINE#         10
+  C:1506H         LINE#         11
+  -------         ENDPROC       _DELAY_US
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        LCD
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  B:0080H.6       PUBLIC        RS
+  B:0080H.5       PUBLIC        RW
+  C:14B6H         PUBLIC        _putSLcd
+  B:00A0H.7       PUBLIC        BUSY
+  B:0080H.7       PUBLIC        E
+  C:14DBH         PUBLIC        lcd_wait
+  C:151AH         PUBLIC        intLcd
+  C:156BH         PUBLIC        _putCLcdC
+  C:1577H         PUBLIC        _putCLcdD
+  -------         PROC          LCD_WAIT
+  C:14DBH         LINE#         9
+  C:14DBH         LINE#         10
+  C:14DBH         LINE#         11
+  C:14DDH         LINE#         12
+  C:14E0H         LINE#         13
+  C:14E2H         LINE#         14
+  C:14E4H         LINE#         15
+  C:14EFH         LINE#         16
+  C:14F1H         LINE#         17
+  C:14F3H         LINE#         18
+  -------         ENDPROC       LCD_WAIT
+  -------         PROC          _PUTCLCDC
+  D:0007H         SYMBOL        com
+  C:156BH         LINE#         20
+  C:156BH         LINE#         21
+  C:156BH         LINE#         22
+  C:156EH         LINE#         23
+  C:1570H         LINE#         24
+  C:1572H         LINE#         25
+  C:1574H         LINE#         26
+  C:1576H         LINE#         27
+  -------         ENDPROC       _PUTCLCDC
+  -------         PROC          _PUTCLCDD
+  D:0007H         SYMBOL        dat
+  C:1577H         LINE#         29
+  C:1577H         LINE#         30
+  C:157AH         LINE#         31
+  C:157CH         LINE#         32
+  C:157EH         LINE#         33
+  C:1580H         LINE#         34
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 8
+
+
+  C:1582H         LINE#         35
+  -------         ENDPROC       _PUTCLCDD
+  -------         PROC          INTLCD
+  C:151AH         LINE#         37
+  C:151AH         LINE#         38
+  C:151FH         LINE#         39
+  C:1524H         LINE#         40
+  -------         ENDPROC       INTLCD
+  -------         PROC          _PUTSLCD
+  D:0031H         SYMBOL        st
+  C:14B6H         LINE#         43
+  C:14BCH         LINE#         44
+  C:14DAH         LINE#         45
+  -------         ENDPROC       _PUTSLCD
+  -------         ENDMOD        LCD
+
+  -------         MODULE        ?C?FPMUL
+  C:0800H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0909H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:09B0H         PUBLIC        ?C?FCASTC
+  C:09ABH         PUBLIC        ?C?FCASTI
+  C:09A6H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:0031H         PUBLIC        ?_PRINTF?BYTE
+  D:0031H         PUBLIC        ?_SPRINTF?BYTE
+  C:0DD8H         PUBLIC        _PRINTF
+  C:0DD2H         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?FPROUND
+  C:0A2EH         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:0A5DH         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPADD
+  C:0B67H         PUBLIC        ?C?FPADD
+  C:0B63H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FTNPWR
+  C:0C88H         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0CC8H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 9
+
+
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0CE1H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D0EH         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?LNEG
+  C:0D20H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0D2EH         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0D3EH         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:146AH         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        ATOI
+  C:11E5H         PUBLIC        _atoi
+  -------         ENDMOD        ATOI
+
+  -------         MODULE        ?C?IMUL
+  C:0D64H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ISDIGIT
+  C:1529H         PUBLIC        _isdigit
+  -------         ENDMOD        ISDIGIT
+
+  -------         MODULE        ISSPACE
+  C:1507H         PUBLIC        _isspace
+  -------         ENDMOD        ISSPACE
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETTEMP?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?HEARTBEAT_RATE_MONITOR?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTSSERIAL?SERIAL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?FLUSHSERIALPORT?SERIAL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+
+******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.05                                                      01/10/2015  22:30:22  PAGE 10
+
+
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02C4H BYTE (34%) *
+******************************************************************************
+
+Program Size: data=80.1 xdata=0 code=3488
+LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)

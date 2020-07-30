@@ -1,0 +1,7 @@
+"STARTUP.obj",
+"main.obj",
+"serial.obj",
+"delay.obj",
+"lcd.obj" 
+TO "BEC028" 
+RAMSIZE(256) 
